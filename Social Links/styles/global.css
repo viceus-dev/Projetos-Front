@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --color-green:hsl(75, 94%, 57%);
+    --color-white:hsl(0, 0%, 100%);
+    --color-grey-st:hsl(0, 0%, 8%);
+    --color-grey-md:hsl(0, 0%, 12%);
+    --color-grey-lw:hsl(0, 0%, 20%);
+    --font-family:"Inter", sans-serif;
+}
+
+body{
+    background-color: var(--color-grey-st);
+    color: var(--color-white);
+    font-family: var(--font-family);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.container{
+    background-color: var(--color-grey-md);
+    border-radius: 20px;
+    height: 620px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 40px;
+    gap: 25px;
+}
+
+#profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+#profile img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+#profile h1{
+    font-weight: 400;
+}
+#profile p{
+    font-weight: 700;
+    color: var(--color-green);
+}
+
+.links{
+    display: flex;
+    justify-content: center;
+}
+.links ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.links ul li{
+    width: 300px;
+    height: 45px;
+    background-color: var(--color-grey-lw);
+    color: var(--color-white);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.links ul li a {
+    text-decoration: none;
+    color: var(--color-white);
+    font-size: 16px;
+    font-weight: 600;
+}
+.links ul li:hover{
+    background-color: var(--color-green);
+}
+.links ul li:hover a{
+    color: var(--color-grey-lw);
+}
+
+
+/*Melhorias
+As áreas clicáveis são pequenas (só o texto).
+width: 100%;
+height: 100%;
+Agora o link é a área toda clickavel
+___________________________________________
+7. A cor do link no hover deveria estar no mesmo contexto
+
+Atualmente:
+
+.links ul li:hover a {
+    color: var(--color-grey-lw);
+}
+-------------------------------------------
+O que você precisa evoluir agora é:
+
+usar menos IDs e mais classes
+
+evitar alturas fixas
+
+melhorar acessibilidade e UX (área clicável maior, transitions)
+
+organizar melhor a hierarquia dos arquivos
+*/
