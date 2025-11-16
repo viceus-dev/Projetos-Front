@@ -1,0 +1,62 @@
+Aqui está um relatório profissional como se eu estivesse revisando seu código em uma empresa 👇
+
+📄 Relatório de Code Review – Senior Frontend Developer
+🟢 Pontos Fortes
+
+Estrutura HTML bem organizada
+O documento está limpo, com indentação consistente e boa escolha de tags semânticas.
+
+Uso sólido de variáveis CSS
+Isso demonstra maturidade na composição visual e facilita manutenção.
+
+Boa modularização do CSS
+Separar global.css e main.css é uma excelente prática, mesmo em projetos pequenos — te prepara para escalabilidade.
+
+Flexbox bem aplicado
+O uso de flexbox está correto, claro e eficiente.
+
+Design bem aproximado do desafio original
+Fiel ao layout do "Results Summary Component", mostrando boa capacidade de replicar interfaces.
+
+🟡 Oportunidades de Melhoria
+
+Evitar IDs para estilização
+IDs têm maior especificidade e prejudicam manutenção futura.
+Substituir por classes melhora escalabilidade.
+
+Valores fixos prejudicam responsividade
+width: 600px e height: 450px quebram em mobile.
+Usar unidades relativas ou grid solucionaria isso.
+
+Agrupamento inconsistentes de textos
+Números soltos com tags <p> quebram a semântica.
+
+Layout pode migrar para CSS Grid
+Para dividir em duas colunas é mais elegante, sem usar width: 50%.
+
+Faltam melhorias de acessibilidade
+
+alt text descritivo
+
+roles e aria-labels
+
+contrastes garantidos por acessibilidade
+
+Componentização
+Muitas estruturas repetidas poderiam ser abstraídas com classes utilitárias.
+
+🔵 Boas Práticas Recomendadas
+
+Use classes para tudo que for estilização.
+
+Prefira CSS Grid para layouts horizontais.
+
+Evite definir altura fixa — deixe o conteúdo ditar a altura.
+
+Crie componentes reutilizáveis: .card, .status-item, .icon-text.
+
+Centralize gradientes e cores repetidas em variáveis.
+
+Simplifique estruturas repetidas (como / e 100 dentro de vários <p>).
+
+Em projetos futuros, comece usando mobile-first no CSS.
