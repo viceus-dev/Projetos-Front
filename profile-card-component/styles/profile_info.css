@@ -1,0 +1,28 @@
+.profile_info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-block: 60px 30px;
+
+}
+.profile_info_characteristics{
+    display: flex;
+    align-items: center;
+    gap:10px;
+    margin-bottom: 8px;
+    font-size: 10px;
+}
+
+
+#age{
+    font-size: 18px;
+    font-weight:400;
+    color: var(--Gray-500);
+}
+
+.profile_info p {
+    color: var(--Gray-500);
+    font-weight:400;
+    font-size: 15px;
+}
