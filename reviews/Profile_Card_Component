@@ -1,0 +1,171 @@
+🟢 1. Pontos Positivos
+✔ Estrutura HTML bem organizada
+
+Tags bem usadas
+
+Semântico dentro do possível para um card
+
+Separação clara de seções: profile, info, stats
+
+Bom uso de <main>
+
+✔ CSS modularizado 😎
+
+Colocar:
+
+main.css
+global.css
+profile_card.css
+profile_info.css
+flex_container_list.css
+
+
+Isso é muito avançado para quem está começando.
+É exatamente o que engenheiros fazem: código limpo e modular.
+
+✔ Uso correto de variáveis CSS no :root
+
+Muito bom para escalabilidade, fácil manutenção e consistência visual.
+
+✔ Layout responsivo do fundo com fixed + z-index
+
+Mostra domínio de posicionamento.
+
+✔ Reset global simples e correto (* { box-sizing: border-box })
+
+Boa prática.
+
+✔ Componentização visual
+
+Essa lógica vai te ajudar quando entrar em React, Tailwind, Design System etc.
+
+🔴 2. Pontos Negativos / Problemas técnicos
+❌ O container tem altura fixa (400px) — quebra o layout
+.container {
+    width: 400px;
+    height: 400px;
+}
+
+
+→ Isso vai estourar em resoluções menores.
+→ Cards devem ter height automático, sempre.
+
+❌ Uso de posicionamento absoluto para a foto → ruim para responsividade
+.profile_card {
+    position: absolute;
+}
+.profile_card img {
+    left: 150px;
+    bottom: 60px;
+}
+
+
+Isso vai:
+
+quebrar se você mudar o tamanho do container,
+
+quebrar no mobile,
+
+exigir refatoração total no futuro.
+
+❌ Linhas horizontais com width fixa (400px)
+.detail {
+    width: 400px;
+}
+
+
+Isso é contra boas práticas — o componente deve se ajustar ao pai automaticamente.
+
+❌ Algumas regras CSS estão com responsabilidades misturadas
+
+Exemplo: .border_image está junto com conteúdo global, mas ela pertence ao componente card.
+
+Nada crítico, mas em projetos reais, essa separação importa muito.
+
+❌ Nomes de classes pouco descritivos
+
+Exemplo:
+
+.detail
+
+.border_image
+
+Num projeto real, nomes devem descrever função:
+
+.profile-divider
+
+.profile-cover
+
+❌ Falta de uso de flexbox para centralizar estrutura geral
+
+Você usa flex no body, mas não aproveita o resto.
+
+❌ Falta de acessibilidade (alt vazio, tags sem semântica complementar)
+
+Nada demais para agora, mas é ponto real na carreira.
+
+🟡 3. Pontos de Melhora Recomendados
+🔧 (1) Transforme o layout da foto em algo responsivo usando flex ou transform
+
+Exemplo:
+
+.profile_card img {
+    position: relative;
+    width: 100px;
+    border-radius: 50%;
+    border: 4px solid var(--Gray-100);
+    transform: translateY(-50px);
+}
+
+
+→ sai do absoluto
+→ card se adapta sozinho
+
+🔧 (2) Remover alturas fixas
+
+Do container e da linha de separação.
+
+.container {
+    width: 400px;
+    min-height: 450px; /* opcional */
+}
+.detail {
+    width: 100%;
+}
+
+🔧 (3) Nomes de classes mais descritivos
+
+Isso é padrão profissional.
+
+🔧 (4) Criar uma estrutura mais semântica
+
+Exemplo:
+
+<section>
+
+<header>
+
+<footer>
+
+Isso te prepara para React e componentização.
+
+🔧 (5) Começar a usar BEM (opcional, mas recomendado)
+
+Exemplo:
+
+.profile-card__avatar
+.profile-card__info
+.profile-card__stats
+
+
+Isso te aproxima do nível profissional rapidamente.
+
+🔧 (6) Responsividade básica
+
+Depois que o layout estiver pronto, adicione:
+
+@media (max-width: 420px) {
+    .container {
+        width: 90%;
+    }
+}
