@@ -1,0 +1,51 @@
+:root{
+    --font-family: "Karla", sans-serif;
+    --text-lg:16px 700 var(--font-family);
+    --text:16px 400 var(--font-family);
+    --Teal500: hsl(179, 62%, 43%);
+    --Green400: hsl(71, 73%, 54%);
+    --Teal100: hsl(204, 43%, 93%);
+    --Gray500: hsl(218, 22%, 67%);
+    --desktop-size:1440px;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--Teal100);
+    font-family: var(--font-family);
+    border: 2px solid gray;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    max-width: var(--desktop-size);
+    margin-inline: auto;
+}
+
+main{
+    padding-inline: 380px;
+}
+
+.content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "call-action call-action"
+    "subscription why-us"
+    ;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+a{
+    text-decoration: none;
+    color: var(--Teal100);
+}

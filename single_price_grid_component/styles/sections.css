@@ -1,0 +1,66 @@
+section{
+    color: white;
+
+}
+
+ #call-action{
+    grid-area:call-action ;
+    background-color: white;
+    h1{
+        color: var(--Teal500);
+    }
+    h2{
+        margin-block: 40px 12px;
+        color: var(--Green400);
+
+    }
+    p{
+        color: var(--Gray500);
+        line-height: 30px;
+    }
+    
+}
+
+#subscription{
+    grid-area: subscription;
+    background-color: var(--Teal500);
+    div {
+        display: flex;
+        align-items: center;
+        margin-block: 20px 15px;
+        gap: 8px;
+        
+        span{
+            font-size: 2rem;
+            font-weight: var(--text-lg);
+        }
+        p{
+            color: var(--Teal100) ;
+        }
+    }
+
+    div:has(a){
+        margin-top: 30px;
+        color: white;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--Green400);
+        border-radius: 5px;
+    }
+
+    
+
+}
+
+#why-us{
+    grid-area: why-us;
+    background-color: hsla(179, 62%, 43%, 0.795);
+    p{
+        margin-top: 30px;
+    
+        width: 100%;
+        padding-right: 20px;
+    }
+}
